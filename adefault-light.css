@@ -1,0 +1,120 @@
+/*
+ * http://aeqdev.com/tools/css/default/
+ * v 1.0 | 20131017
+ * License: none (public domain)
+ */
+
+/*
+ * Colors: 00 1c 39 55 aa c6 e3 ff
+ */
+
+@import "adefault.css";
+
+body
+{
+    background: #ffffff;
+}
+
+body, a
+{
+    color: #555555;
+}
+
+
+h1, h2, h3, h4, h5, h6,
+acronym, abbr, dfn, dt, table caption, th, ins,
+a:hover
+{
+    color: #000000;
+}
+
+acronym, abbr, dfn
+{
+    border-bottom-color: #aaaaaa;
+}
+
+hr
+{
+    border-bottom-color: #aaaaaa;
+}
+
+table, td
+{
+    border-color: #c6c6c6;
+}
+
+th
+{
+    border-color: #555555;
+    background: #c6c6c6;
+}
+
+kbd, tt, tbody tr:hover td
+{
+    background: #e3e3e3;
+}
+
+input, button, textarea, select
+{
+    outline: 0;
+    color: #555555;
+    background: #ffffff;
+    border: 1px #c6c6c6 solid;
+    box-shadow: 0 0 1ex #c6c6c6;
+}
+
+input:hover, button:hover, textarea:hover, select:hover,
+input:focus, button:focus, textarea:focus, select:focus
+{
+    border-color: #aac6e3 !important;
+    box-shadow: 0 0 1ex #aac6e3 !important;
+}
+
+button,
+input[type=submit],
+input[type=reset],
+input[type=button]
+{
+    background-color: #e3e3e3;
+    text-shadow: 0 1px 1px #ffffff;
+    box-shadow: 0 .3ex 1ex -.25ex #c6c6c6;
+    background-image: -webkit-linear-gradient(top, #ffffff, #e3e3e3);
+    background-image: -moz-linear-gradient(top, #ffffff, #e3e3e3);
+    background-image: -ms-linear-gradient(top, #ffffff, #e3e3e3);
+    background-image: -o-linear-gradient(top, #ffffff, #e3e3e3);
+    background-image: linear-gradient(top, #ffffff, #e3e3e3);
+}
+
+input[type=submit]:hover, input[type=submit]:focus,
+input[type=reset]:hover, input[type=reset]:focus,
+input[type=button]:hover, input[type=button]:focus,
+button:hover, button:focus
+{
+    box-shadow: 0 .3ex 1ex -.25ex #aac6e3 !important;
+    color: #000000;
+}
+
+button:active,
+input[type=submit]:active,
+input[type=reset]:active,
+input[type=button]:active
+{
+    position: relative;
+    top: 1px;
+    box-shadow: 0 0 1ex -.25ex #aac6e3 !important;
+    color: #000000;
+}
+
+.error,
+.error + label
+{
+    color: #aa0000;
+}
+
+.error + label input,
+.error + label textarea,
+.error + label select
+{
+    border-color: #e3aaaa;
+    box-shadow: 0 0 1ex #e3aaaa;
+}
