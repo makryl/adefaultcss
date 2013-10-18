@@ -1,6 +1,6 @@
 /*
  * http://aeqdev.com/tools/css/default/
- * v 1.0 | 20131017
+ * v 1.1 | 20131018
  * License: none (public domain)
  */
 
@@ -44,10 +44,14 @@ body
 {
     margin: 1.5em auto;
     padding: 0 1.5em;
-    font: 10pt/1.35 sans-serif;
     overflow-y: scroll;
 }
 
+body,
+input, button, textarea, select
+{
+    font: 13px/1.35 sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6
 {
@@ -107,7 +111,7 @@ ol ol
     list-style-type: lower-latin;
 }
 
-ul ul
+ul ul, ol ol
 {
     margin-bottom: 1ex;
 }
@@ -158,7 +162,7 @@ strong, b
     font-weight: bold;
 }
 
-del
+del, s
 {
     text-decoration: line-through;
 }
@@ -197,15 +201,15 @@ code
 pre
 {
     white-space: pre;
-    overflow-y: hidden;
-    overflow-x: auto;
-    padding: .2em 0;
 }
 
 pre > code
 {
     display: block;
     line-height: 1;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: .2em 0; /* avoid cut of first and last lines */
 }
 
 hr
@@ -254,7 +258,6 @@ input, button, textarea, select
     display: block;
     padding: 1ex;
     margin: 0;
-    font: 1em/1 sans-serif;
     vertical-align: baseline;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -266,7 +269,7 @@ button,
 input[type=checkbox], input[type=radio],
 input[type=submit], input[type=reset], input[type=button]
 {
-    display: inline;
+    display: inline-block;
     width: auto;
 }
 
@@ -285,8 +288,7 @@ input[type=submit], input[type=reset], input[type=button]
 }
 
 /* FF fix */
-button::-moz-focus-inner,
-input::-moz-focus-inner
+::-moz-focus-inner
 {
     padding: 0 !important;
     border: 0 !important;
