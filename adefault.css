@@ -1,6 +1,6 @@
 /*
  * http://aeqdev.com/tools/css/default/
- * v 1.1 | 20131018
+ * v 1.2 | 20131020
  * License: none (public domain)
  */
 
@@ -42,6 +42,7 @@ footer, header, hgroup, menu, nav, section
 
 body
 {
+    line-height: 1.4;
     margin: 1.5em auto;
     padding: 0 1.5em;
     overflow-y: scroll;
@@ -50,7 +51,8 @@ body
 body,
 input, button, textarea, select
 {
-    font: 13px/1.35 sans-serif;
+    font-size: 14px;
+    font-family: sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6
@@ -121,40 +123,26 @@ acronym, abbr, dfn, dt, table caption
     font-variant: small-caps;
 }
 
-blockquote, cite, q, address, em, i
+blockquote, cite, q, address, figcaption, em, i
 {
     font-style: italic;
 }
 
-blockquote, q
+blockquote
 {
     quotes: none;
 }
 
-blockquote:before, blockquote:after
+q
+{
+    quotes: '«' '»' '„' '“';
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after
 {
     content: '';
     content: none;
-}
-
-q:before
-{
-    content: '«';
-}
-
-q:after
-{
-    content: '»';
-}
-
-q q:before
-{
-    content: '„';
-}
-
-q q:after
-{
-    content: '“';
 }
 
 strong, b
@@ -172,14 +160,20 @@ small, sub, sup
     font-size: .8em;
 }
 
+sub, sup
+{
+    line-height: 0;
+    position: relative;
+}
+
 sup
 {
-    vertical-align: super;
+    top: -0.5em;
 }
 
 sub
 {
-    vertical-align: sub;
+    bottom: -0.25em;
 }
 
 acronym, abbr, dfn
@@ -234,6 +228,7 @@ table
 {
     width: 100%;
     border-collapse: collapse;
+    border-spacing: 0;
 }
 
 th, td
@@ -258,6 +253,7 @@ input, button, textarea, select
     display: block;
     padding: 1ex;
     margin: 0;
+    line-height: 1;
     vertical-align: baseline;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -269,6 +265,7 @@ button,
 input[type=checkbox], input[type=radio],
 input[type=submit], input[type=reset], input[type=button]
 {
+    cursor: pointer;
     display: inline-block;
     width: auto;
 }
@@ -282,7 +279,7 @@ textarea
 button,
 input[type=submit], input[type=reset], input[type=button]
 {
-    cursor: pointer;
+    height: 2.4em;
     overflow: visible;
     white-space: nowrap;
 }
@@ -292,22 +289,4 @@ input[type=submit], input[type=reset], input[type=button]
 {
     padding: 0 !important;
     border: 0 !important;
-}
-
-.error
-{
-    margin-bottom: 0;
-}
-
-.error + label input,
-.error + label textarea,
-.error + label select
-{
-}
-
-label + .description
-{
-    display: block;
-    position: relative;
-    top: -1.5em;
 }

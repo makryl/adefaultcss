@@ -7,9 +7,14 @@
         <style>
             body
             {
-                font-family: Arial, sans-serif;
                 margin: 4.5em 0 1.5em;
                 padding: 0;
+            }
+
+            body,
+            input, button, textarea, select
+            {
+                font-family: Arial, sans-serif;
             }
 
             .wrapper
@@ -19,7 +24,7 @@
                 padding: 0 1.5em;
             }
 
-            nav
+            .menu
             {
                 z-index: 1;
                 position: fixed;
@@ -32,14 +37,14 @@
                 box-shadow: 0 0 1em #404040;
             }
 
-            nav a
+            .menu a
             {
                 display: inline-block;
                 color: #fff;
                 padding: 0 1ex;
             }
 
-            nav a:hover, nav a.active
+            .menu a:hover, .menu a.active
             {
                 background-color: #c0c0c0;
                 color: #000;
@@ -88,14 +93,14 @@
     </head>
     <body>
 
-        <nav>
+        <div class="menu">
             <div class="wrapper">
                 <a class="logo" href="http://aeqdev.com/"><em>Aeq</em>dev</a>
                 <a href="#default" onclick="theme(this, 'adefault.css'); return false;">adefault.css</a>
                 <a href="#light" onclick="theme(this, 'adefault-light.css'); return false;" class="active">adefault-light.css</a>
                 <a href="#dark" onclick="theme(this, 'adefault-dark.css'); return false;">adefault-dark.css</a>
             </div>
-        </nav>
+        </div>
 
         <div class="wrapper">
 
@@ -108,12 +113,12 @@
     Light and dark themes contains basic color schemas for text, tables and form controls.</p>
 
 <ul>
-    <li><a href="adefault.css">adefault.css</a> (3.9Kb) <a href="adefault.min.css">adefault.min.css</a> (2.7Kb)</li>
-    <li><a href="adefault-light.css">adefault-light.css</a> (2.1Kb, colors only) <a href="adefault-light.min.css">adefault-light.min.css</a> (4.2Kb, including default)</li>
-    <li><a href="adefault-dark.css">adefault-dark.css</a> (2.1Kb, colors only) <a href="adefault-dark.min.css">adefault-dark.min.css</a> (4.3Kb, including default)</li>
+    <li><a href="adefault.css">adefault.css</a> (3.7Kb) <a href="adefault.min.css">adefault.min.css</a> (2.7Kb)</li>
+    <li><a href="adefault-light.css">adefault-light.css</a> (1.9Kb, colors only) <a href="adefault-light.min.css">adefault-light.min.css</a> (4.1Kb, including default)</li>
+    <li><a href="adefault-dark.css">adefault-dark.css</a> (1.9Kb, colors only) <a href="adefault-dark.min.css">adefault-dark.min.css</a> (4.1Kb, including default)</li>
 </ul>
 
-<div class="like">
+<!--<div class="like">
     <div>
         <iframe src="http://ghbtns.com/github-btn.html?user=Aequiternus&repo=adefaultcss&type=watch&count=true"
             allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
@@ -149,7 +154,7 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://aeqdev.com/tools/css/default/" data-via="twitterapi" data-lang="en">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
-</div>
+</div>-->
 
 
 
@@ -320,17 +325,14 @@
         Text input
         <input type="text" value="value" />
     </label>
-    <small class="description">Description of input</small>
     <label>
         Text date
         <input type="date" value="2013-01-01" />
     </label>
-    <p class="error">Error in input</p>
     <label>
         Text input
         <input type="text" value="value" />
     </label>
-    <small class="description">Description of input</small>
     <label>
         <input type="checkbox" />
         Checkbox

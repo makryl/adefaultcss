@@ -1,6 +1,6 @@
 /*
  * http://aeqdev.com/tools/css/default/
- * v 1.0 | 20131017
+ * v 1.2 | 20131020
  * License: none (public domain)
  */
 
@@ -103,18 +103,4 @@ input[type=button]:active
     top: 1px;
     box-shadow: 0 0 1ex -.25ex #808080 !important;
     color: #ffffff;
-}
-
-.error,
-.error + label
-{
-    color: #c00000;
-}
-
-.error + label input,
-.error + label textarea,
-.error + label select
-{
-    border-color: #400000;
-    box-shadow: 0 0 1ex #802020;
 }
