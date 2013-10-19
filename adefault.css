@@ -138,8 +138,7 @@ q
     quotes: '«' '»' '„' '“';
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after
+blockquote:before, blockquote:after
 {
     content: '';
     content: none;
