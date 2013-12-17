@@ -15,8 +15,10 @@ usage () {
     echo '                 Default equals brightest text color'
     echo '-c, --colors     Colors calculation less file'
     echo '                 Default: atheme-colors.less'
-    echo '--theme          Theme less file'
+    echo '--theme          Theme style sheet'
     echo '                 Default: atheme.less'
+    echo '-d, --default    Default style sheet'
+    echo '                 Default: adefault.css'
     echo '-h, --help       This help information'
     echo ''
     version
@@ -63,6 +65,12 @@ case $1 in
         --theme )       shift
                         theme=$1
                         ;;
+        -d )            shift
+                        default=$1
+                        ;;
+        --default )     shift
+                        default=$1
+                        ;;
     esac
     shift
 done
@@ -70,7 +78,8 @@ done
 background=${background:-"#ffffff"}
 text=${text:-"#000000"}
 link=${link:-"$text"}
+default=${default:-"adefault.css"}
 colors=${colors:-"atheme-colors.less"}
 theme=${theme:-"atheme.less"}
 
-cat $colors $theme | lessc -x --global-var="background=$background" --global-var="text=$text" --global-var="link=$link" -
+cat $default $colors $theme | lessc -x --global-var="background=$background" --global-var="text=$text" --global-var="link=$link" -
