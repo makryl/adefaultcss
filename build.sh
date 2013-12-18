@@ -7,4 +7,4 @@ echo Compile light
 ./atheme.sh -b '#ffffff' -t '#000000' -l '#003366' > adefault-light.min.css
 
 echo Compile dark
-./atheme.sh -b '#000000' -t '#ffffff' > adefault-dark.min.css
+./atheme.sh -b '#000000' -t '#ffffff' -l '#99ccff' > adefault-dark.min.css
