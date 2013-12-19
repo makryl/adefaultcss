@@ -6,6 +6,8 @@ Default theme contains Eric Meyer's reset (http://meyerweb.com/eric/tools/css/re
 
 Light and dark themes contains basic color schemas for text, tables and form controls.
 
+No classes used, only tag styles.
+
 Customize your own style sheet using online or command-line (lessc needed to run it) theme generator.
 
 License: none (public domain)
