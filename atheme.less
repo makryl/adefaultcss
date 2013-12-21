@@ -70,12 +70,12 @@ input:focus, button:focus, textarea:focus, select:focus
 
 .button-text-shadow () when (lightness(@background) >= lightness(@text))
 {
-    text-shadow: 0 -1px 1px @background;
+    text-shadow: 0 1px 1px @background;
 }
 
 .button-text-shadow () when (lightness(@background) < lightness(@text))
 {
-    text-shadow: 0 1px 1px @background;
+    text-shadow: 0 -1px 1px @background;
 }
 
 .button-background-image () when (lightness(@background) >= lightness(@text))
