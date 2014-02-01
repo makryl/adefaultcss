@@ -1,7 +1,7 @@
 #!/bin/sh
 
 version () {
-    echo 'atheme v 1.3'
+    echo 'atheme v 1.4'
     echo 'http://aeqdev.com/tools/css/default/'
     exit
 }

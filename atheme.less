@@ -1,6 +1,6 @@
 /*
  * http://aeqdev.com/tools/css/default/
- * v 1.3
+ * v 1.4
  * License: none (public domain)
  */
 
@@ -64,8 +64,14 @@ input, button, textarea, select
 input:hover, button:hover, textarea:hover, select:hover,
 input:focus, button:focus, textarea:focus, select:focus
 {
-    border-color: @link3 !important;
-    box-shadow: 0 0 1ex @link3 !important;
+    border-color: @link3;
+    box-shadow: 0 0 1ex @link3;
+}
+
+input[type="checkbox"], input[type="checkbox"]:hover, input[type="checkbox"]:focus,
+input[type="radio"], input[type="radio"]:hover, input[type="radio"]:focus
+{
+    box-shadow: none;
 }
 
 .button-text-shadow () when (lightness(@background) >= lightness(@text))
@@ -108,7 +114,7 @@ input[type=submit]:hover, input[type=submit]:focus,
 input[type=reset]:hover, input[type=reset]:focus,
 input[type=button]:hover, input[type=button]:focus
 {
-    box-shadow: 0 .3ex 1ex @link3 !important;
+    box-shadow: 0 .3ex 1ex @link3;
     color: @link;
 }
 
@@ -119,6 +125,6 @@ input[type=button]:active
 {
     position: relative;
     top: 1px;
-    box-shadow: 0 .2ex 1ex -.2ex @link3 !important;
+    box-shadow: 0 .2ex 1ex -.2ex @link3;
     color: @link;
 }

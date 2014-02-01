@@ -3,13 +3,15 @@
     <head>
         <title>default | css | tools | aeqdev.com</title>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="adefault.css">
         <link id="stylesheet" rel="stylesheet/less" href="atheme-light.less">
         <meta name="description" content="Default, light, dark and customizable lightweight CSS themes with reset and typography.">
         <style>
             body
             {
-                margin: 4.5em 0 1.5em;
+                margin-top: 4.5em;
                 padding: 0;
             }
 
@@ -19,11 +21,21 @@
                 font-family: Arial, sans-serif;
             }
 
+            #generate .col33 input
+            {
+                width: 100%;
+            }
+
+            label
+            {
+                white-space: nowrap;
+            }
+
             .wrapper
             {
-                width: 200mm;
+                max-width: 200mm;
                 margin: 0 auto;
-                padding: 0 1.5em;
+                padding: 0 1ex;
             }
 
             .menu
@@ -88,6 +100,7 @@
             {
                 float: left;
                 width: 33%;
+                padding-right: 1ex;
             }
         </style>
 
@@ -97,8 +110,8 @@
             };
         </script>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js" type="text/javascript"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.6.1/less.min.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
         <script>
             function theme(a,
                 backgroundHue, backgroundSaturation, backgroundLightness,
@@ -159,7 +172,7 @@
 
             function generate()
             {
-                $('#code').val(document.getElementById('less:tools-css-default-atheme-light').innerHTML);
+                $('#code').val(less.sheets[0].nextSibling.innerHTML);
             }
 
             $(function(){
@@ -197,7 +210,7 @@
 <p>Source code at <a href="https://github.com/Aequiternus/adefaultcss">GitHub</a> contains also command-line theme generator (<a href="http://lesscss.org/">lessc</a> needed to run it).
 
 <h2>Customize your own style sheet</h2>
-<form>
+<form id="generate">
     <label class="col33">
         Background hue
         <input id="background-hue" type="range" value="0" max="360" onchange="customize()">
@@ -245,6 +258,9 @@
         <textarea id="code" onclick="$(this).select()"></textarea>
     </label>
 </form>
+
+<p>Don't forget to add meta tag for mobile devices:
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"></code></pre>
 
 <div class="like">
     <div>

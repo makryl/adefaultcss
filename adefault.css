@@ -1,6 +1,6 @@
 /*
  * http://aeqdev.com/tools/css/default/
- * v 1.3
+ * v 1.4
  * License: none (public domain)
  */
 
@@ -44,58 +44,59 @@ body
 {
     line-height: 1.4;
     margin: 1.5em auto;
-    padding: 0 1.5em;
+    padding: 0 1ex; /* good look for mobile devices (1.5em too big) */
     overflow-y: scroll;
 }
 
 body,
 input, button, textarea, select
 {
-    font-size: 14px;
+    font-size: 14px; /* base font-size in px to avoid rounding differences */
     font-family: sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6
 {
-    line-height: 1.1;
-    margin-bottom: .2em;
+    line-height: 1.1; /* compact multiline headings */
+    margin: .15em 0; /* 1.1 line-height + 2 * 0.15 margin = 1.4 body line-height */
     page-break-after: avoid;
 }
 
+/* font-size in percent for good look at mobile devices */
 h1
 {
-    font-size: 5em;
+    font-size: 3.1em; /* + 0.6 */
 }
 
 h2
 {
-    font-size: 3em;
+    font-size: 2.5em; /* + 0.5 */
 }
 
 h3
 {
-    font-size: 2em;
+    font-size: 2.0em; /* + 0.4 */
 }
 
 h4
 {
-    font-size: 1.7em;
+    font-size: 1.6em; /* + 0.3 */
 }
 
 h5
 {
-    font-size: 1.4em;
+    font-size: 1.3em; /* + 0.2 */
 }
 
 h6
 {
-    font-size: 1.2em;
+    font-size: 1.1em; /* + 0.1 */
 }
 
 p, ul, ol, dl, blockquote, table,
 hr, form, address, pre, label
 {
-    margin-bottom: 1.5em;
+    margin: 1ex 0 1.5em;
 }
 
 li
@@ -159,6 +160,7 @@ small, sub, sup
     font-size: .8em;
 }
 
+/* relative position to save line-height */
 sub, sup
 {
     line-height: 0;
@@ -186,29 +188,22 @@ code, samp, var, kbd, tt
     font-family: monospace;
 }
 
-code
-{
-    font-size: .9em;
-}
-
 pre
 {
     white-space: pre;
     overflow-y: hidden;
     overflow-x: auto;
-    padding: .2em 0; /* avoid cut of first and last lines */
 }
 
 pre > code
 {
     display: block;
     line-height: 1;
+    padding: .2em 0; /* avoid cut of first and last lines; 1 line-height + 2 * 0.2 padding = 1.4 body line-height */
 }
 
 hr
 {
-    margin-left: 1.5em;
-    margin-right: 1.5em;
     border-bottom: 1px solid;
 }
 
@@ -272,7 +267,7 @@ input[type=submit], input[type=reset], input[type=button]
 textarea
 {
     width: 100%;
-    height: 7em;
+    height: 7em; /* 7 = 5 * 1.4 line-height */
 }
 
 button,
