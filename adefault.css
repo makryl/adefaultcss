@@ -1,6 +1,6 @@
 /*
  * http://aeqdev.com/tools/css/default/
- * v 1.4
+ * v 1.5
  * License: none (public domain)
  */
 
@@ -197,8 +197,8 @@ pre
 pre > code
 {
     display: block;
-    line-height: 1;
-    padding: .2em 0; /* avoid cut of first and last lines; 1 line-height + 2 * 0.2 padding = 1.4 body line-height */
+    line-height: 1.2;
+    padding: .1em 0; /* 1.2 line-height + 2 * 0.1 padding = 1.4 body line-height */
 }
 
 hr

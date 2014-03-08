@@ -1,7 +1,7 @@
 #!/bin/sh
 
 version () {
-    echo 'atheme v 1.4'
+    echo 'atheme v 1.5'
     echo 'http://aeqdev.com/tools/css/default/'
     exit
 }
@@ -82,4 +82,5 @@ default=${default:-"adefault.css"}
 colors=${colors:-"atheme-colors.less"}
 theme=${theme:-"atheme.less"}
 
+echo "/* v1.5 http://aeqdev.com/tools/css/default/ */"
 cat $default $colors $theme | lessc -x --global-var="background=$background" --global-var="text=$text" --global-var="link=$link" -
