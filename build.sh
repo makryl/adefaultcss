@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo Compile default
-echo "/* v1.5 http://aeqdev.com/tools/css/default/ */" > adefault.min.css
+echo "/* v 1.6 http://aeqdev.com/tools/css/default/ */" > adefault.min.css
 lessc -x adefault.css >> adefault.min.css
 
 echo Compile light
