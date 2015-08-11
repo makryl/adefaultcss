@@ -1,6 +1,6 @@
 /*
  * http://aeqdev.com/tools/css/default/
- * v 1.6
+ * v 1.7
  * License: none (public domain)
  */
 
@@ -30,7 +30,6 @@ time, mark, audio, video
     vertical-align: baseline;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -44,7 +43,7 @@ body
 {
     line-height: 1.4;
     margin: 1.5em auto;
-    padding: 0 1ex; /* good look for mobile devices (1.5em too big) */
+    padding: 0 .5em; /* good look for mobile devices (1.5em too big) */
     overflow-y: scroll;
 }
 
@@ -95,17 +94,17 @@ h6
 p, ul, ol, dl, blockquote, table,
 hr, form, address, pre, label
 {
-    margin: 1ex 0 1.5em;
+    margin: .5em 0 1.5em;
 }
 
 li
 {
-    margin: 1ex 0 1ex 2em;
+    margin: .5em 0 .5em 2em;
 }
 
 dd
 {
-    margin: 1ex 0 1ex 1.5em;
+    margin: .5em 0 .5em 1.5em;
 }
 
 ol ol
@@ -115,7 +114,7 @@ ol ol
 
 ul ul, ol ol
 {
-    margin-bottom: 1ex;
+    margin-bottom: .5em;
 }
 
 acronym, abbr, dfn, dt, table caption
@@ -184,7 +183,7 @@ acronym, abbr, dfn
 
 code, samp, var, kbd, tt
 {
-    font-family: monospace;
+    font-family: monospace, monospace;
 }
 
 pre
@@ -228,7 +227,7 @@ th, td
 {
     vertical-align: top;
     text-align: left;
-    padding: 1ex;
+    padding: .5em;
 }
 
 table, th, td
@@ -244,12 +243,11 @@ label
 input, button, textarea, select
 {
     display: block;
-    padding: 1ex;
+    padding: .5em;
     margin: 0;
     line-height: normal; /* with this magic browsers will render elements with same height */
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
