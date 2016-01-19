@@ -1,6 +1,6 @@
 /*
  * http://aeqdev.com/tools/css/default/
- * v 1.7
+ * v 1.8
  * License: none (public domain)
  */
 
@@ -56,8 +56,8 @@ input, button, textarea, select
 
 h1, h2, h3, h4, h5, h6
 {
-    line-height: 1.1; /* compact multiline headings */
-    margin: .15em 0; /* 1.1 line-height + 2 * 0.15 margin = 1.4 body line-height */
+    line-height: 1.2; /* compact multiline headings */
+    margin: .4em 0; /* 1.2 line-height + 2 * 0.4 margin = 2 line-height */
     page-break-after: avoid;
 }
 
